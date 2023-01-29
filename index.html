@@ -4,9 +4,96 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
+    <main class="container">
+      <h1>Student Registration Form</h1>
+
+      <form action="/" class="flex-clm p-bottom">
+        <label class="flex-clm p-bottom" for="first-name">
+          Firstname
+          <input id="first-name" type="text " placeholder="Firstname"
+        /></label>
+        <label class="flex-clm p-bottom" for="middle-name">
+          Middlename
+          <input id="middle-name" type="text " placeholder="Middlename"
+        /></label>
+        <label class="flex-clm p-bottom" for="last-name">
+          Lastname
+          <input id="last-name" type="text " placeholder="Lastname"
+        /></label>
+        <label class="p-bottom" for="course-select"
+          >Course :
+
+          <select id="course-select">
+            <option value="">Course</option>
+            <option value="Bachelor">Bachelor's</option>
+            <option value="Master">Master's</option>
+            <option value="Doctoral">Doctoral</option>
+          </select></label
+        >
+        <div class="p-bottom">
+          <legend>Gender:</legend>
+          <label for="male">
+            <input type="radio" id="male" name="gender" />
+            Male
+          </label>
+          <label for="famale">
+            <input type="radio" id="famale" name="gender" />
+            Famale
+          </label>
+          <label for="other">
+            <input type="radio" id="other" name="gender" />
+            Other
+          </label>
+        </div>
+        <label for="phon" class="flex-clm p-bottom">
+          Phone:
+          <div class="p-bottom flex-clm">
+            <input
+              type="tel"
+              id="phone"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              value="+91"
+            />
+          </div>
+          <div class="p-bottom flex-clm">
+            <input
+              type="tel"
+              id="phone"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              placeholder="phone no:"
+            />
+          </div>
+        </label>
+        <label class="flex-clm p-bottom" for="address">
+          Current Address :
+          <textarea
+            name="address"
+            id="address"
+            placeholder="Current Address "
+            cols="30"
+            rows="10"
+          ></textarea>
+        </label>
+        <label for="email" class="flex-clm p-bottom">
+          <strong>Email:</strong>
+          <input type="email" id="email" placeholder="Enter Email" />
+        </label>
+        <label for="password" class="flex-clm p-bottom">
+          <strong>Password:</strong>
+          <input type="password" id="password" placeholder="Enter Password" />
+        </label>
+        <label for="password" class="flex-clm p-bottom">
+          <strong>Re-type Password :</strong>
+          <input type="password" id="password" placeholder="Retype Password" />
+        </label>
+        <button class="btn" type="submit">Register</button>
+      </form>
+    </main>
+
     <script src="app.js"></script>
   </body>
 </html>

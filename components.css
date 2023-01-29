@@ -1,0 +1,29 @@
+.flex-clm {
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  padding: 20px;
+  background-color: #add8e6;
+}
+.p-bottom {
+  padding-bottom: 10px;
+}
+input,
+textarea {
+  background-color: #ffff;
+  padding: 10px;
+  outline: none;
+  border: none;
+}
+.btn {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+  background-color: #56b35f;
+  color: #ffff;
+}
+#course-select {
+  border: none;
+  outline: none;
+}
