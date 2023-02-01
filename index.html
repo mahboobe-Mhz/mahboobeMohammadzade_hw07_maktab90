@@ -14,15 +14,29 @@
       <form action="/" class="flex-clm p-bottom">
         <label class="flex-clm p-bottom" for="first-name">
           Firstname
-          <input id="first-name" type="text " placeholder="Firstname"
+          <input
+            id="first-name"
+            type="text "
+            placeholder="Firstname"
+            minlength="4"
+            required
         /></label>
         <label class="flex-clm p-bottom" for="middle-name">
           Middlename
-          <input id="middle-name" type="text " placeholder="Middlename"
+          <input
+            id="middle-name"
+            type="text "
+            placeholder="Middlename"
+            minlength="4"
         /></label>
         <label class="flex-clm p-bottom" for="last-name">
           Lastname
-          <input id="last-name" type="text " placeholder="Lastname"
+          <input
+            id="last-name"
+            type="text "
+            placeholder="Lastname"
+            required
+            minlength="4"
         /></label>
         <label class="p-bottom" for="course-select"
           >Course :
@@ -52,12 +66,7 @@
         <label for="phon" class="flex-clm p-bottom">
           Phone:
           <div class="p-bottom flex-clm">
-            <input
-              type="tel"
-              id="phone"
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-              value="+91"
-            />
+            <input type="tel" id="phone" value="+91" />
           </div>
           <div class="p-bottom flex-clm">
             <input
@@ -65,6 +74,7 @@
               id="phone"
               pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
               placeholder="phone no:"
+              required
             />
           </div>
         </label>
@@ -76,19 +86,42 @@
             placeholder="Current Address "
             cols="30"
             rows="10"
+            required
+            maxlength="90"
           ></textarea>
         </label>
         <label for="email" class="flex-clm p-bottom">
           <strong>Email:</strong>
-          <input type="email" id="email" placeholder="Enter Email" />
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter Email"
+            required
+            pattern=".+@globex\.com"
+            list="defaultEmails"
+          />
+          <datalist id="defaultEmails">
+            <option value="me@gmail.com"></option>
+            <option value="me@yahoo.com"></option>
+          </datalist>
         </label>
         <label for="password" class="flex-clm p-bottom">
           <strong>Password:</strong>
-          <input type="password" id="password" placeholder="Enter Password" />
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter Password"
+            required
+          />
         </label>
         <label for="password" class="flex-clm p-bottom">
           <strong>Re-type Password :</strong>
-          <input type="password" id="password" placeholder="Retype Password" />
+          <input
+            type="password"
+            id="password"
+            placeholder="Retype Password"
+            required
+          />
         </label>
         <button class="btn" type="submit">Register</button>
       </form>
